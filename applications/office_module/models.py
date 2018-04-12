@@ -130,6 +130,19 @@ class registrar_create_doc(models.Model):
     Description = models.CharField(max_length=200)
     file=models.FileField()
 
+class registrar_director_section(models.Model):
+        file_name = models.CharField(max_length=50)
+        date = models.DateField()
+        purpose = models.CharField(max_length=100)
+        status = models.IntegerField(choices=Constants.STATUS, default=0)
+
+
+class registrar_purchase_sales_section(models.Model):
+    file_name = models.CharField(max_length=50)
+    date = models.DateField()
+    purpose = models.CharField(max_length=100)
+    status = models.IntegerField(choices=Constants.STATUS, default=0)
+    file = models.FileField()
 
     # def __str__(self):
     #     return self.file_name & self.purpose & self.Description & self.file
