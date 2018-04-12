@@ -154,5 +154,19 @@ class registrar_finance_section(models.Model):
         status = models.IntegerField(choices=Constants.STATUS, default=0)
         file = models.FileField()
 
+
+class registrar_establishment_section(models.Model):
+    person_name = models.CharField(max_length=50)
+    date = models.DateField()
+    duration = models.IntegerField()
+    post = models.CharField(max_length=100)
+    file = models.FileField()
+
+class registrar_general_section(models.Model):
+    file_name = models.CharField(max_length=50)
+    date = models.DateField()
+    amount = models.IntegerField()
+    status = models.IntegerField(choices=Constants.STATUS, default=0)
+    file = models.FileField()
     # def __str__(self):
     #     return self.file_name & self.purpose & self.Description & self.file

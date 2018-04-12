@@ -1,9 +1,9 @@
 <table class="ui very basic collapsing celled sortable table"
        style="padding-left: 2.5%;
-                                                          padding-right: 2.5%;
-                                                          padding-top: 1%;
-                                                          padding-bottom: 1.5%;
-                                                          margin: auto;">
+              padding-right: 2.5%;
+              padding-top: 1%;
+              padding-bottom: 1.5%;
+              margin: auto;">
     <thead>
     <tr>
         <th class="one wide column">
@@ -20,6 +20,9 @@
         <th class="four wide column">
             Post
         </th>
+        <th class="one wide column">
+            Duration
+        </th>
 
         <th class="two wide column">
             Attachment
@@ -28,6 +31,7 @@
     </thead>
 
     <tbody>
+    {% for views in view3 %}
     <tr>
 
         <td class="collapsing">
@@ -39,20 +43,24 @@
         <td>
             <h4 class="ui image header">
                 <div class="content">
-                    Zlatan Ibrahimovic
+                    {{view3.person_name}}
                     <div class="sub header">
-                        gmail@zlatan.com
+                        janesh@iiitdmj.ac.in
                     </div>
                 </div>
             </h4>
         </td>
 
         <td>
-            ...
+            {{view3.date}}
         </td>
 
         <td>
-            ...
+           {{view3.post}}
+        </td>
+
+        <td>
+            {{view3.duration}}
         </td>
 
         <td>
@@ -60,11 +68,11 @@
                             TODO: Add the attachment here!
                         {% endcomment %}
             <a class="ui inverted circular icon button" style="margin: auto;" target="_blank" href="">
-                <i class="large attach black icon"></i>
+                <i class="large attach black icon">{{view3.file}}</i>
             </a>
         </td>
     </tr>
-
+    {% endfor %}
     </tbody>
 </table>
 

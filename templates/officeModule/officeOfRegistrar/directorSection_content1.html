@@ -21,24 +21,25 @@
     </thead>
 
     <tbody>
+    {% for views in view %}
     <tr>
         <td>
-            ...
+           {{view.file_name}}
         </td>
 
         <td>
-            ...
+            {{view.date}}
         </td>
 
         <td>
-            ...
+           {{view.purpose}}
         </td>
 
         <td>
             <i class="large orange warning icon"></i>
         </td>
     </tr>
-
+    {% endfor %}
     </tbody>
 </table>
 
