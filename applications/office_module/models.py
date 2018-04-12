@@ -151,12 +151,13 @@ class registrar_finance_section(models.Model):
         file_name = models.CharField(max_length=50)
         date = models.DateField()
         purpose = models.CharField(max_length=100)
-        status = models.IntegerField(choices=Constants.STATUS, default=0)
+        status = models.IntegerField(choices=Constants.STATUS)
         file = models.FileField()
 
 
 class registrar_establishment_section(models.Model):
     person_name = models.CharField(max_length=50)
+    person_mail_id = models.CharField(max_length=50,default="xyz")
     date = models.DateField()
     duration = models.IntegerField()
     post = models.CharField(max_length=100)
