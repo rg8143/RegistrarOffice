@@ -65,6 +65,8 @@
                     <i class="right floated chevron right icon"></i>
                 </a>
 
+
+
                  <a class="item" data-tab="sixth">
                     Upload Documents
                     <i class="right floated chevron right icon"></i>
@@ -74,6 +76,13 @@
                     Create Documents
                     <i class="right floated chevron right icon"></i>
                 </a>
+
+                 <a class="item" data-tab="eight">
+                    Archive
+                    <i class="right floated chevron right icon"></i>
+                </a>
+
+
             </div>
             {% comment %}The Tab-Menu ends here!{% endcomment %}
 
@@ -132,7 +141,6 @@
             {% comment %}The Publications ends here!{% endcomment %}
 
 
-
             {% comment %}The Publications starts here!{% endcomment %}
             <div class="ui tab segment" data-tab="sixth">
                 {% block tab6 %}
@@ -142,6 +150,7 @@
             {% comment %}The Publications ends here!{% endcomment %}
 
 
+
             {% comment %}The Publications starts here!{% endcomment %}
             <div class="ui tab segment" data-tab="seventh">
                 {% block tab7 %}
@@ -149,6 +158,24 @@
                 {% endblock %}
             </div>
             {% comment %}The Publications ends here!{% endcomment %}
+
+
+
+            {% comment %}The Publications starts here!{% endcomment %}
+            <div class="ui tab segment" data-tab="eight">
+                {% block tab8 %}
+                    {% include 'officeModule/officeOfRegistrar/archive.html' %}
+                {% endblock %}
+            </div>
+            {% comment %}The Publications ends here!{% endcomment %}
+
+
+
+            {% comment %}The Publications starts here!{% endcomment %}
+
+            {% comment %}The Publications ends here!{% endcomment %}
+
+
 
         </div>
         {% comment %}The central-rail segment ends here!{% endcomment %}
@@ -189,6 +216,7 @@
         <div class="column"></div>
 
     </div>
+
     {% comment %}The grid ends here!{% endcomment %}
 
 

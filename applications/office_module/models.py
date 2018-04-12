@@ -123,3 +123,9 @@ class purchase_commitee(models.Model) :
 class quotations(models.Model) :
     quotation1 = models.FileField()
     quotation2 = models.FileField()
+
+class registrar_create_doc(models.Model):
+    file_name = models.CharField(max_length=50)
+    purpose =  models.CharField(max_length=100)
+    Description = models.CharField(max_length=200)
+    file = models.FileField()

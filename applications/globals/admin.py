@@ -2,7 +2,7 @@ from django.contrib import admin
 
 from .models import (DepartmentInfo, Designation, ExtraInfo, Faculty, Feedback,
                      Issue, IssueImage, Staff)
-from applications.office_module.models import Registrar_File,vendor,apply_for_purchase,stock,purchase_commitee,quotations
+from applications.office_module.models import Registrar_File,vendor,apply_for_purchase,registrar_create_doc,stock,purchase_commitee,quotations
 from applications.file_tracking.models import Tracking,File
 
 
@@ -19,6 +19,7 @@ admin.site.register(Designation)
 admin.site.register(Registrar_File)
 admin.site.register(vendor)
 admin.site.register(purchase_commitee)
+admin.site.register(registrar_create_doc)
 admin.site.register(quotations)
 admin.site.register(stock)
 admin.site.register(apply_for_purchase)
