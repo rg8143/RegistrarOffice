@@ -128,4 +128,7 @@ class registrar_create_doc(models.Model):
     file_name = models.CharField(max_length=50)
     purpose =  models.CharField(max_length=100)
     Description = models.CharField(max_length=200)
-    file = models.FileField()
+
+
+    # def __str__(self):
+    #     return self.file_name & self.purpose & self.Description & self.file
