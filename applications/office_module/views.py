@@ -52,7 +52,7 @@ def upload(request):
     docname = request.POST.get("docname")
     purpose = request.POST.get("purpose")
     description = request.POST.get("description")
-    # upload = request.POST.get("upload")
     request = registrar_create_doc(file_name=docname, purpose=purpose, Description=description)
     request.save()
     return HttpResponseRedirect("/office/officeOfRegistrar/")
+
