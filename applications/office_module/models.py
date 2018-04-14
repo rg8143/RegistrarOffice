@@ -134,7 +134,7 @@ class registrar_director_section(models.Model):
         file_name = models.CharField(max_length=50)
         date = models.DateField()
         purpose = models.CharField(max_length=100)
-        status = models.IntegerField(choices=Constants.STATUS, default=0)
+        status = models.CharField(max_length=1,choices=Constants.STATUS, default=0)
 
 
 class registrar_purchase_sales_section(models.Model):
