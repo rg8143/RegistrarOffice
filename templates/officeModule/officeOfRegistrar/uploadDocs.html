@@ -2,7 +2,7 @@
 
 
 
- <form  method="post" action="{% url 'office:uploaddoc' %}">
+ <form  method="post" action="{% url 'office:uploaddoc' %}" enctype="multipart/form-data">
      {% csrf_token %}
     {% comment %}The add a new skill Accordian starts here!{% endcomment %}
     <div class="ui form" style="padding: 8px; padding-left: 24px; padding-right: 24px;">

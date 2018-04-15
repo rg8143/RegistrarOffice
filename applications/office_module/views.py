@@ -14,7 +14,7 @@ def officeOfPurchaseOfficr(request):
 
 
 def officeOfRegistrar(request):
-    view=registrar_create_doc.objects.all()
+    view = registrar_create_doc.objects.all()
     view2 = registrar_director_section.objects.all()
     view3 = registrar_establishment_section.objects.all()
     view4 = apply_for_purchase.objects.all()
@@ -45,7 +45,8 @@ def submit(request):
     docname=request.POST.get("docname")
     purpose=request.POST.get("purpose")
     description=request.POST.get("description")
-    request=registrar_create_doc(file_name=docname,purpose=purpose,Description=description)
+    file=request.POST.get("file")
+    request=registrar_create_doc(file_name=docname,purpose=purpose,Description=description,file=file)
     request.save()
     return HttpResponseRedirect("/office/officeOfRegistrar/")
 
@@ -54,7 +55,8 @@ def upload(request):
     docname = request.POST.get("docname")
     purpose = request.POST.get("purpose")
     description = request.POST.get("description")
-    request = registrar_create_doc(file_name=docname, purpose=purpose, Description=description)
+    file = request.FILES['upload']
+    request = registrar_create_doc(file_name=docname, purpose=purpose, Description=description, file=file)
     request.save()
     return HttpResponseRedirect("/office/officeOfRegistrar/")
 
