@@ -34,6 +34,8 @@
     </thead>
 
     <tbody>
+    {% for views in view4  %}
+    {% for views in view5  %}
     <tr>
 
         <td class="collapsing">
@@ -43,15 +45,15 @@
         </td>
 
         <td>
-            5478
+            {{ views.item_name }}
         </td>
 
         <td>
-            10/04/18
+            {{ views.purchase_date }}
         </td>
 
         <td>
-            Buy 8 Projectors
+            {{ views.purpose }}
         </td>
 
         <td>
@@ -62,8 +64,8 @@
             {% comment %}
                 TODO: Add the attachment here!
             {% endcomment %}
-            <a class="ui inverted circular icon button" style="margin: auto;" target="_blank" href="">
-                <i class="large attach black icon"></i>
+            <a class="ui inverted circular icon button" style="margin: auto;" target="_blank" href="{{ views.quotation1.url }}">
+                <i class="large attach black icon">{{ views.quotation1 }}</i>
             </a>
         </td>
     </tr>
@@ -101,7 +103,8 @@
             </a>
         </td>
     </tr>
-
+    {% endfor %}
+    {% endfor %}
     </tbody>
 </table>
 

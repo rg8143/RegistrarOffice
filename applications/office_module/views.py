@@ -17,7 +17,9 @@ def officeOfRegistrar(request):
     view=registrar_create_doc.objects.all()
     view2 = registrar_director_section.objects.all()
     view3 = registrar_establishment_section.objects.all()
-    context = {"view":view,"view2":view2,"view3":view3}
+    view4 = apply_for_purchase.objects.all()
+    view5 = quotations.objects.all()
+    context = {"view":view,"view2":view2,"view3":view3,"view4":view4,"view5":view5}
 
     return render(request, "officeModule/officeOfRegistrar/officeOfRegistrar.html", context)
 
