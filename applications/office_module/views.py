@@ -41,14 +41,7 @@ def genericModule(request):
 
     return render(request, "officeModule/genericModule/genericModule.html", context)
 
-def submit(request):
-    docname=request.POST.get("docname")
-    purpose=request.POST.get("purpose")
-    description=request.POST.get("description")
-    file=request.POST.get("file")
-    request=registrar_create_doc(file_name=docname,purpose=purpose,Description=description,file=file)
-    request.save()
-    return HttpResponseRedirect("/office/officeOfRegistrar/")
+
 
 
 def upload(request):

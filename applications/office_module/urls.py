@@ -9,7 +9,6 @@ urlpatterns = [
     url(r'^officeOfDeanStudents/', views.officeOfDeanStudents, name='officeOfDeanStudents'),
     url(r'^officeOfPurchaseOfficer/', views.officeOfPurchaseOfficr, name='officeOfPurchaseOfficer'),
     url(r'^officeOfRegistrar/$', views.officeOfRegistrar, name='officeOfRegistrar'),
-    url(r'^officeOfRegistrar/submit/$', views.submit, name='docsubmit'),
     url(r'^officeOfRegistrar/fetchpurchase/$', views.submit, name='fetchpurchase'),
     url(r'^officeOfRegistrar/upload/$', views.upload, name='uploaddoc'),
     url(r'^officeOfDeanRSPC/', views.officeOfDeanRSPC, name='officeOfDeanRSPC'),
