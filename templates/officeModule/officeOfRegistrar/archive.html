@@ -1,5 +1,6 @@
 {% load static %}
-
+<form method="POST" action="">
+      {% csrf_token %}
 <table class="ui very basic collapsing celled sortable table"
        style="padding-left: 2.5%;
                                                           padding-right: 2.5%;
@@ -37,7 +38,7 @@
 
         <td class="collapsing">
             <div class="ui fitted checkbox">
-                <input type="checkbox"> <label></label>
+                <input type="checkbox" name="checked[]" value="{{views}}" > <label></label>
             </div>
         </td>
 
@@ -46,7 +47,7 @@
         </td>
 
         <td>
-            12.4.18
+            {{current_date}}
         </td>
 
         <td>
@@ -72,12 +73,12 @@
 
 <br>
 
-<div class="ui primary right floated button">GA</div>
-<div class="ui green right floated button">PS</div>
-<div class="ui red right floated button">FA</div>
-<div class="ui red right floated button">ES</div>
+<button class="ui primary right floated button" type="submit" name="GA">GA</button>
+<button class="ui green right floated button" type="submit" name="PS">PS</button>
+<button class="ui red right floated button" type="submit">FA</button>
+<button class="ui red right floated button" type="submit">ES</button>
 
-
+</form>
 <br>
 <br>
 <div class="ui divider"></div>

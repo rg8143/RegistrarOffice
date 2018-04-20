@@ -168,6 +168,6 @@ class registrar_general_section(models.Model):
     date = models.DateField()
     amount = models.IntegerField()
     status = models.IntegerField(choices=Constants.STATUS, default=0)
-    file = models.FileField()
+    file = models.ForeignKey(registrar_create_doc, on_delete=models.CASCADE)
     # def __str__(self):
     #     return self.file_name & self.purpose & self.Description & self.file
